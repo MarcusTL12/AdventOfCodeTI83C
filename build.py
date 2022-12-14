@@ -14,7 +14,8 @@ src_path = f"{year}/day{day}/part{part}.c"
 out_path = f"build/{year}-{day}p{part}"
 
 ansi = False
-compiler = "sdcc"
+# compiler = "sdcc"
+compiler = "sccz80"
 opt = 3
 speed = "all"
 
