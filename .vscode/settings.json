@@ -2,6 +2,8 @@
     "files.associations": {
         "stdio.h": "c",
         "ex1.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "typeinfo": "c",
+        "ctype.h": "c"
     }
 }
