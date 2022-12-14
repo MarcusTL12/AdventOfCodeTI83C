@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#pragma string name day 1 part 2
+#pragma string name day 2 part 2
 
 #include "input.h"
 
