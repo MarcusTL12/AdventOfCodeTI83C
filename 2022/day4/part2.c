@@ -5,7 +5,7 @@
 
 #pragma string name day 4 part 2
 
-#include "ex1.h"
+#include "input.h"
 
 int main() {
     printf("Day 4 part 2\n");

@@ -17,7 +17,7 @@ ansi = False
 # compiler = "sdcc"
 compiler = "sccz80"
 opt = 3
-speed = "all"
+speed = "sub32,add32,sub16,lshift32,rshift32,inlineints,ucharmult,intcompare,longcompare"
 
 if ansi:
     clib_s = "-clib=ansi"
