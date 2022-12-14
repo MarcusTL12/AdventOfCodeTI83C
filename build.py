@@ -29,6 +29,4 @@ command = ' '.join(
      f"-create-app -O{opt} --opt-code-speed={speed} {src_path}"]
 )
 
-# print(command)
-
 subprocess.call(command, shell=True)
