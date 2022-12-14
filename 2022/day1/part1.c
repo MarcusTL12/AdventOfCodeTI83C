@@ -1,16 +1,15 @@
-#include <ctype.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "ex1.h"
-
 #pragma string name day 1 part 1
+
+#include "input.h"
 
 int main() {
     printf("Day 1 part 1\n");
 
-    long cursum = 0, curmax = 0;
+    int32_t cursum = 0, curmax = 0;
 
     for (char *c = input; *c; c++) {
         if (*c == '\n') {

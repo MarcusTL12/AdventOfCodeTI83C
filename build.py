@@ -15,8 +15,8 @@ out_path = f"build/{year}-{day}p{part}"
 
 ansi = False
 compiler = "sdcc"
-opt = 0
-speed = "none"
+opt = 3
+speed = "all"
 
 if ansi:
     clib_s = "-clib=ansi"
