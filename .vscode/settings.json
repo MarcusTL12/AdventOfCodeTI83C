@@ -4,6 +4,8 @@
         "ex1.h": "c",
         "stdlib.h": "c",
         "typeinfo": "c",
-        "ctype.h": "c"
+        "ctype.h": "c",
+        "reverse_bytes.h": "c",
+        "stdint.h": "c"
     }
 }

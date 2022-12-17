@@ -26,7 +26,7 @@ else:
 
 command = ' '.join(
     [f"zcc +ti83 {clib_s} -compiler={compiler} -o {out_path}",
-     f"-create-app -O{opt} --opt-code-speed={speed} {src_path}"]
+     f"-create-app -O{opt} --opt-code-speed={speed} -Iutil {src_path}"]
 )
 
 subprocess.call(command, shell=True)
