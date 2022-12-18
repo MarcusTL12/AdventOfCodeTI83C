@@ -19,7 +19,8 @@ int main() {
     uint32_t cur_smallest = TOTAL_CAP, unused = TOTAL_CAP - dirsizes[0];
 
     for (uint8_t i = 0; i < next_dir_space; i++) {
-        if (dirsizes[i] + unused >= NEEDED_SPACE && dirsizes[i] < cur_smallest) {
+        if (dirsizes[i] + unused >= NEEDED_SPACE &&
+            dirsizes[i] < cur_smallest) {
             cur_smallest = dirsizes[i];
         }
     }
