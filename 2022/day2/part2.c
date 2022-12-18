@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#pragma string name day 2 part 2
-
-#include "input.h"
+extern char input[];
 
 int main() {
     printf("Day 2 part 2\n");

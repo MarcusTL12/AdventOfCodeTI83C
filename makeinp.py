@@ -12,7 +12,7 @@ if len(sys.argv) >= 4:
     inpname = sys.argv[3]
 
 inp_path = f"{year}/day{day}/{inpname}"
-out_path = f"{year}/day{day}/{inpname}.h"
+out_path = f"{year}/day{day}/{inpname}.c"
 
 i_type = "unsigned int"
 i_width = 2

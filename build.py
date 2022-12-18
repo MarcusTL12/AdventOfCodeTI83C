@@ -45,4 +45,6 @@ command.append(src_path)
 
 command = ' '.join(command)
 
+print(command)
+
 subprocess.call(command, shell=True)
