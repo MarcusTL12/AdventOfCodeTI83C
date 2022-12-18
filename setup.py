@@ -21,9 +21,9 @@ compiler = "sdcc"
 
 opt = 3
 
-speed = ','.join(["sub32", "add32", "sub16", "lshift32", "rshift32",
-                 "inlineints", "ucharmult", "intcompare", "longcompare"])
-# speed = ""
+# speed = ','.join(["sub32", "add32", "sub16", "lshift32", "rshift32",
+#                  "inlineints", "ucharmult", "intcompare", "longcompare"])
+speed = ""
 
 flags = ["+ti83"]
 

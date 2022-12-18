@@ -3,17 +3,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#pragma string name day 6 part 2
+#include "parse_filesystem.h"
 
-#include "input.h"
-#include "solve.h"
+extern char input[];
 
 int main() {
-    printf("Day %d part %d\n", 6, 2);
+    printf("Day %d part %d\n", 7, 2);
 
-    uint16_t ans = solve(input, 14);
+    next_dir_space = 0;
+    parse_filesystem(input + 7);
 
-    printf("%d", ans);
 
     getkey();
     return 0;
