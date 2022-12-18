@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-import sys
-
 def makeinp(year, day, inpname):
     inp_path = f"{year}/day{day}/{inpname}"
     out_path = f"build/{inpname}.c"

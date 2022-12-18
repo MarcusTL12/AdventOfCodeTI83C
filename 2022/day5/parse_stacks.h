@@ -7,7 +7,7 @@
 uint8_t stacks[MAX_STACKS][MAX_STACK_HEIGHT];
 uint8_t stackheights[MAX_STACKS];
 
-#include "util/reverse_bytes.h"
+#include "reverse_bytes.h"
 
 static char *parse_stacks(char *input, uint8_t *n_stacks_p) {
     uint8_t linelen = 0;

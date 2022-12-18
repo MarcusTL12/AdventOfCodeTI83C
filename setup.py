@@ -52,6 +52,8 @@ cmake_command = ' '.join([
     f"-DINPUT={inpname}",
 ])
 
+os.makedirs("build", exist_ok=True)
+
 makeinp(year, day, inpname)
 
 os.chdir("build")

@@ -11,3 +11,5 @@ add_executable(
     ${YEAR}/day${DAY}/part${PART}.c
     build/${INPUT}.c
 )
+
+target_include_directories(aoc PRIVATE util)
