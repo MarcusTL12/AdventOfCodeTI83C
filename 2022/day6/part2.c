@@ -5,7 +5,7 @@
 
 #pragma string name day 6 part 2
 
-#include "input.h"
+extern char input[];
 #include "solve.h"
 
 int main() {

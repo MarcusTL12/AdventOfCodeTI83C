@@ -3,7 +3,6 @@
 import subprocess
 import sys
 import os
-import shutil
 
 from makeinp import makeinp
 
@@ -52,9 +51,6 @@ cmake_command = ' '.join([
     f"-DPART={part}",
     f"-DINPUT={inpname}",
 ])
-
-shutil.rmtree("build")
-os.makedirs("build")
 
 makeinp(year, day, inpname)
 

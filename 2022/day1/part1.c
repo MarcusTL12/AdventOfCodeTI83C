@@ -4,7 +4,7 @@
 
 #pragma string name day 1 part 1
 
-#include "input.h"
+extern char input[];
 
 int main() {
     printf("Day 1 part 1\n");

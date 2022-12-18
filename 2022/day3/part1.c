@@ -5,7 +5,7 @@
 
 #pragma string name day 3 part 1
 
-#include "input.h"
+extern char input[];
 
 static uint8_t get_index(char c) {
     if (islower(c)) {

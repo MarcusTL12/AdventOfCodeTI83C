@@ -5,7 +5,7 @@
 
 #pragma string name day 5 part 1
 
-#include "input.h"
+extern char input[];
 #include "parse_stacks.h"
 
 int main() {
