@@ -16,12 +16,11 @@ int main() {
     next_dir_space = 0;
     parse_filesystem(input + 7);
 
-    uint32_t cur_smallest = TOTAL_CAP, unused = TOTAL_CAP - dirtree[0].size;
+    uint32_t cur_smallest = TOTAL_CAP, unused = TOTAL_CAP - dirsizes[0];
 
     for (uint8_t i = 0; i < next_dir_space; i++) {
-        if (dirtree[i].size + unused >= NEEDED_SPACE &&
-            dirtree[i].size < cur_smallest) {
-            cur_smallest = dirtree[i].size;
+        if (dirsizes[i] + unused >= NEEDED_SPACE && dirsizes[i] < cur_smallest) {
+            cur_smallest = dirsizes[i];
         }
     }
 

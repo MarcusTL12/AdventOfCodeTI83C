@@ -16,8 +16,8 @@ int main() {
     uint32_t s = 0;
 
     for (uint8_t i = 0; i < next_dir_space; i++) {
-        if (dirtree[i].size < 100000) {
-            s += dirtree[i].size;
+        if (dirsizes[i] < 100000) {
+            s += dirsizes[i];
         }
     }
 
