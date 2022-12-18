@@ -7,12 +7,25 @@
 
 extern char input[];
 
+#define TOTAL_CAP 70000000
+#define NEEDED_SPACE 30000000
+
 int main() {
     printf("Day %d part %d\n", 7, 2);
 
     next_dir_space = 0;
     parse_filesystem(input + 7);
 
+    uint32_t cur_smallest = TOTAL_CAP, unused = TOTAL_CAP - dirtree[0].size;
+
+    for (uint8_t i = 0; i < next_dir_space; i++) {
+        if (dirtree[i].size + unused >= NEEDED_SPACE &&
+            dirtree[i].size < cur_smallest) {
+            cur_smallest = dirtree[i].size;
+        }
+    }
+
+    printf("%ld\n", cur_smallest);
 
     getkey();
     return 0;
