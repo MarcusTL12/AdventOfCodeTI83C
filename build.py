@@ -14,19 +14,35 @@ src_path = f"{year}/day{day}/part{part}.c"
 out_path = f"build/{year}-{day}p{part}"
 
 ansi = False
-# compiler = "sdcc"
-compiler = "sccz80"
+compiler = "sdcc"
+# compiler = "sccz80"
+
 opt = 3
-speed = "sub32,add32,sub16,lshift32,rshift32,inlineints,ucharmult,intcompare,longcompare"
+
+speed = ','.join(["sub32", "add32", "sub16", "lshift32", "rshift32",
+                 "inlineints", "ucharmult", "intcompare", "longcompare"])
+# speed = ""
+
+command = ["zcc", "+ti83"]
 
 if ansi:
-    clib_s = "-clib=ansi"
-else:
-    clib_s = ""
+    command.append("-clib=ansi")
 
-command = ' '.join(
-    [f"zcc +ti83 {clib_s} -compiler={compiler} -o {out_path}",
-     f"-create-app -O{opt} --opt-code-speed={speed} -Iutil {src_path}"]
-)
+command.append(f"-compiler={compiler}")
+command.append(f"-o {out_path}")
+command.append("-create-app")
+
+if compiler == "sccz80" and len(speed) > 0:
+    command.append(f"--opt-code-speed={speed}")
+
+if compiler == "sccz80":
+    command.append(f"-O{opt}")
+else:
+    command.append(f"-SO{opt}")
+
+command.append(f"-Iutil")
+command.append(src_path)
+
+command = ' '.join(command)
 
 subprocess.call(command, shell=True)
