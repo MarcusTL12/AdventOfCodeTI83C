@@ -7,7 +7,7 @@
 
 extern char input[];
 
-static uint8_t get_index(char c) {
+static uint8_t get_index(char c) __z88dk_fastcall {
     if (islower(c)) {
         return c - 'a';
     } else {
