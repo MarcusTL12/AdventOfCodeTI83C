@@ -1,9 +1,7 @@
+#include <graphics.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <graphics.h>
-
-// #include "abs_m.h"
 
 extern char input[];
 
@@ -12,8 +10,6 @@ static int16_t sx, sy;
 static void push_pixel(int16_t x) {
     if (abs(sx - x) <= 1) {
         plot(sx, sy);
-    } else {
-        unplot(sx, sy);
     }
 
     sx++;
@@ -27,7 +23,7 @@ int main() {
     printf("Day %d part %d\n", 10, 2);
 
     sx = 0;
-    sy = 0;
+    sy = 9;
 
     int16_t x = 1;
 
