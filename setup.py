@@ -16,10 +16,10 @@ else:
     inpname = "input"
 
 ansi = False
-compiler = "sdcc"
-# compiler = "sccz80"
+# compiler = "sdcc"
+compiler = "sccz80"
 
-opt = 3
+opt = 0
 
 target = "ti83"
 # target = "test"
