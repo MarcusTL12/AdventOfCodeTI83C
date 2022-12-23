@@ -21,11 +21,14 @@ compiler = "sdcc"
 
 opt = 3
 
+target = "ti83"
+# target = "test"
+
 # speed = ','.join(["sub32", "add32", "sub16", "lshift32", "rshift32",
 #                  "inlineints", "ucharmult", "intcompare", "longcompare"])
 speed = ""
 
-flags = ["+ti83"]
+flags = [f"+{target}"]
 
 if ansi:
     flags.append("-clib=ansi")
@@ -50,6 +53,7 @@ cmake_command = ' '.join([
     f"-DDAY={day}",
     f"-DPART={part}",
     f"-DINPUT={inpname}",
+    "-DCMAKE_C_COMPILER_FORCED=TRUE"
 ])
 
 os.makedirs("build", exist_ok=True)
